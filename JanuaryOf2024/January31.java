@@ -1,3 +1,4 @@
+package JanuaryOf2024;
 class January31 {
     /*
      * https://leetcode.com/problems/two-sum/description/
