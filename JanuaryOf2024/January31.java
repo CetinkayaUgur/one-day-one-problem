@@ -3,7 +3,6 @@ class January31 {
     /*
      * https://leetcode.com/problems/two-sum/description/
      */
-
     public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
         for (int i = 0; i < nums.length; i++) {
