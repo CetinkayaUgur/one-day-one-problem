@@ -1,20 +1,21 @@
 package FebruaryOf2024;
 
-public class February2 {
-    /*
-     * longestCommonPrefixResult += strs[i].charAt(index);
-     */
+class February2 {
     public String longestCommonPrefix(String[] strs) {
-        String longestCommonPrefixResult = "";
-        int index = 0;
-        while(true){
-            for(int i=0; i<strs.length-1 ; i++){
-                if(strs[i].charAt(index)!= strs[i+1].charAt(index)){
-                    return longestCommonPrefixResult;
+        if (strs.length == 0) return "";
+        else if(strs.length == 1) return strs[0];
+
+        String reference = strs[0];
+
+        for(int i = 0; i < reference.length(); i++) {
+            char currentChar = reference.charAt(i);
+
+            for(int j = 1; j < strs.length; j++) {
+                if(strs[j].charAt(i) != currentChar) {
+                    return reference.substring(0, i);
                 }
             }
-            longestCommonPrefixResult += strs[index].charAt(index);
-            index++;
         }
+        return reference;
     }
 }
