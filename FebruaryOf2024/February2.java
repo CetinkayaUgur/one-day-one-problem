@@ -1,6 +1,9 @@
 package FebruaryOf2024;
 
 class February2 {
+    /*
+     * https://leetcode.com/problems/longest-common-prefix/description/
+     */
     public String longestCommonPrefix(String[] strs) {
         if (strs.length == 0) return "";
         else if(strs.length == 1) return strs[0];

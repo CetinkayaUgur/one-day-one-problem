@@ -9,13 +9,12 @@ class February3 {
 
         for (int i = 0; i < s.length() - 1; i++) {
             str[i] = s.charAt(i);
-            if (str.charAt(i) == '(' & str.charAt(i + 1) == ')' | str.charAt(i) == '[' & str.charAt(i + 1) == ']'
-                    | str.charAt(i) == '{' & str.charAt(i + 1) == '}') {
-                str.charAt(i) = null;
+            if (s.charAt(i) == '(' & s.charAt(i + 1) == ')' | s.charAt(i) == '[' & s.charAt(i + 1) == ']' | s.charAt(i) == '{' & s.charAt(i + 1) == '}') {
+                str[i] = 'n';
                 i++;
             }
         }
-        if (str[i] != null)
-            return false;
+        if (str[0] != 'n') return false;
+        return true;
     }
 }
