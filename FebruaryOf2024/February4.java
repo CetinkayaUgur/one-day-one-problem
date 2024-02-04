@@ -21,5 +21,6 @@ public class February4 {
         if (key) {
             System.out.println("Yes");            
         }
+        scanner.close();
     }
 }

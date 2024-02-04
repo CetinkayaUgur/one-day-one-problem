@@ -1,20 +1,32 @@
 package FebruaryOf2024;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
 class February3 {
     public boolean isValid(String s) {
         /**
          * https://leetcode.com/problems/valid-parentheses/
          */
-        char[] str = new char[s.length()];
+        Stack<Character> stack = new Stack<>();
+        Map<Character, Character> bracketMap = new HashMap<>();
+        bracketMap.put(')', '(');
+        bracketMap.put('}', '{');
+        bracketMap.put(']', '[');
 
-        for (int i = 0; i < s.length() - 1; i++) {
-            str[i] = s.charAt(i);
-            if (s.charAt(i) == '(' & s.charAt(i + 1) == ')' | s.charAt(i) == '[' & s.charAt(i + 1) == ']' | s.charAt(i) == '{' & s.charAt(i + 1) == '}') {
-                str[i] = 'n';
-                i++;
+        for (char bracket : s.toCharArray()) {
+            if (bracketMap.containsValue(bracket)) {
+                stack.push(bracket);
+            } else if (bracketMap.containsKey(bracket)) {
+                if (stack.isEmpty() || stack.pop() != bracketMap.get(bracket)) {
+                    return false;
+                }
+            } else {
+                return false;
             }
         }
-        if (str[0] != 'n') return false;
-        return true;
+
+        return stack.isEmpty();
     }
 }
