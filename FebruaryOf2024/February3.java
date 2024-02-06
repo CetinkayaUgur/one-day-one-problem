@@ -5,10 +5,10 @@ import java.util.Map;
 import java.util.Stack;
 
 class February3 {
+    /**
+     * https://leetcode.com/problems/valid-parentheses/
+     */
     public boolean isValid(String s) {
-        /**
-         * https://leetcode.com/problems/valid-parentheses/
-         */
         Stack<Character> stack = new Stack<>();
         Map<Character, Character> bracketMap = new HashMap<>();
         bracketMap.put(')', '(');
