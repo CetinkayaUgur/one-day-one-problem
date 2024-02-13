@@ -9,7 +9,6 @@ public class February12 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int T = scanner.nextInt();
-        String result = "";
 
         for (int i = 0; i < T; i++) {
             try {
@@ -32,5 +31,6 @@ public class February12 {
                 System.out.println(scanner.next() + " can't be fitted anywhere.");
             }
         }
+        scanner.close();
     }
 }
