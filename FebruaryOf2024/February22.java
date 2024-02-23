@@ -19,7 +19,7 @@ public class February22 {
             set.add(num);
         }
         
-        // Return false if none of numbers repeat
+        // Return false if no aney numbers repeat
         return false;
     }
 }
