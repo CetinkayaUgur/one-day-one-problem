@@ -8,7 +8,7 @@ public class February25 {
      */
     public boolean canConstruct(String ransomNote, String magazine) {
         HashMap<Character, Integer> magazineMap = new HashMap<>();
-        
+
         for (char c : magazine.toCharArray()) {
             magazineMap.put(c, magazineMap.getOrDefault(c, 0) + 1);
         }
@@ -20,7 +20,7 @@ public class February25 {
                 magazineMap.put(c, magazineMap.get(c) - 1);
             }
         }
-
+        
         return true;
     }
 }
