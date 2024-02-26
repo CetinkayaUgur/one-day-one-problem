@@ -4,23 +4,6 @@ public class February20 {
     /*
      * https://leetcode.com/problems/same-tree/?envType=daily-question&envId=2024-02-26
      */
-
-
-    /**
-     * Definition for a binary tree node.
-     * public class TreeNode {
-     *     int val;
-     *     TreeNode left;
-     *     TreeNode right;
-     *     TreeNode() {}
-     *     TreeNode(int val) { this.val = val; }
-     *     TreeNode(int val, TreeNode left, TreeNode right) {
-     *         this.val = val;
-     *         this.left = left;
-     *         this.right = right;
-     *     }
-     * }
-     */
     public boolean isSameTree(TreeNode p, TreeNode q) {
         // Both of tree are null then its true
         if (p == null && q == null) return true;
@@ -30,5 +13,18 @@ public class February20 {
         
         // Check every subtrees
         return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+    }
+}
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode() {}
+    TreeNode(int val) { this.val = val; }
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
 }
