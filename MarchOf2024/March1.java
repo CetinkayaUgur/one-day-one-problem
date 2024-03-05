@@ -5,7 +5,13 @@ public class March1 {
      * https://leetcode.com/problems/reverse-linked-list/description/
      */
     public ListNode reverseList(ListNode head) {
-        
+        if (head == null) return null;
+        if (head.next == null)return head;
+        while (head.next.next != null) {
+            head = head.next;
+        }
+        head.next = null;
+        return head;
     }
 }
 
